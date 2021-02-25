@@ -1,6 +1,6 @@
 import arcade
 import random
-
+from Tree import Tree
 class Game(arcade.Window):
     def __init__(self):
         super().__init__(800,600,"Test")
@@ -18,7 +18,8 @@ class Game(arcade.Window):
         # Draw the character
         texture = arcade.load_texture("./character.png")
         arcade.draw_scaled_texture_rectangle(450, 50, texture, 0.5, 0)
-
+        myTree = Tree(540,25,40,30)
+        myTree.draw()
 def main():
     window = Game()
     arcade.run()
